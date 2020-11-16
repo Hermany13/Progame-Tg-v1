@@ -70,6 +70,7 @@ public class ControllerPlayer : MonoBehaviour
 
     void ExecutaMovimentos()
     {
+        playerAnimator.SetFloat("VelocidadeY", playerRigidbody2D.velocity.y);
         playerAnimator.SetBool("Jump", !isGrounded);
         playerAnimator.SetBool("Run", playerRigidbody2D.velocity.x != 0f && isGrounded);
     }
